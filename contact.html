@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <title>EVALUACIÓN Nº2 &#127909;</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+             <nav>
+                <p><a href="index.html">Miri</a> <a href="proyectos.html">Proyectos</a> <a href="cv.html">CV</a> <a href="contact.html"class="active">Contact</a></p>
+            </nav>
+            <main>
+                <canvas id="grafico" height="40" width="100">
+                    <!--acá se mete el mapa-->
+                </canvas>
+            </main>
+            <footer>
+               <p><a href="https://github.com/mirandasepulveda-la">XX</a> <a href="https://github.com/profesorfaco/dno037-2021">XX</a></p>
+
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script>
+var ctx = document.getElementById('grafico').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Byzantium', 'Sólo los amantes sobreviven', 'Sombras Tenebrosas', 'What we do in the shadows', 'Entrevista con el vampiro', 'Mi pequeño vampiro', 'Drácula, de Bram Stoker'],
+        datasets: [{
+            label: 'millones de USD recaudados a nivel mundial',
+            data: [1, 7, 245, 7, 220, 27, 215],
+            backgroundColor: 'rgba(232, 52, 28, 0.5)',
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    </body>
+</html>
